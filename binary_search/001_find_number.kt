@@ -1,6 +1,3 @@
-package tinyflutterteam.binary_search
-
-
 fun findNumber(numbers: IntArray, findNumber: Int): Int {
     var indexOfFindNumber = -1
 
@@ -35,7 +32,7 @@ fun findNumber(numbers: IntArray, findNumber: Int): Int {
     return indexOfFindNumber
 }
 
-fun assert(result: Boolean) {
+fun assertResult(result: Boolean) {
     if(!result) {
         throw Exception("assert fail $result")
     }
@@ -47,14 +44,14 @@ fun main() {
 
     val findNumber1 = 9
     val index1 = findNumber(numbers, findNumber1)
-    assert(index1 == 5)
+    assertResult(index1 == 5)
 
     val findNumber2 = 1
     val index2 = findNumber(numbers, findNumber2)
-    assert(index2 == 0)
+    assertResult(index2 == 0)
 
     val findNumber3 = 0
     val index3 = findNumber(numbers, findNumber3)
-    assert(index3 == -1)
+    assertResult(index3 == -1)
 
 }

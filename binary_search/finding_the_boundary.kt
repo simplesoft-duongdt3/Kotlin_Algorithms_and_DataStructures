@@ -1,6 +1,3 @@
-package tinyflutterteam.binary_search
-
-
 fun findingTheBoundary(flags: BooleanArray): Int {
     var indexOfFindNumber = -1
     var indexLeft = 0
@@ -21,7 +18,7 @@ fun findingTheBoundary(flags: BooleanArray): Int {
     return indexOfFindNumber
 }
 
-fun assert(result: Boolean) {
+fun assertResult(result: Boolean) {
     if(!result) {
         throw Exception("assert fail $result")
     }
@@ -30,14 +27,14 @@ fun assert(result: Boolean) {
 fun main() {
     val flags1: BooleanArray = booleanArrayOf(false, false, false, false, true)
     val index1 = findingTheBoundary(flags1)
-    assert(index1 == 4)
+    assertResult(index1 == 4)
 
     val flags2: BooleanArray = booleanArrayOf(false, true, true, true)
     val index2 = findingTheBoundary(flags2)
-    assert(index2 == 1)
+    assertResult(index2 == 1)
 
     val flags3: BooleanArray = booleanArrayOf(true, true, true, true, true, true , true, true, true )
     val index3 = findingTheBoundary(flags3)
-    assert(index3 == 0)
+    assertResult(index3 == 0)
 
 }
